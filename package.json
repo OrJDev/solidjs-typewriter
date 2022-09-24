@@ -1,0 +1,54 @@
+{
+  "name": "solidjs-typewriter",
+  "description": "SolidJS TypeWriter",
+  "author": "OrJDev",
+  "license": "MIT",
+  "version": "0.0.6",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "solid": "./dist/index.jsx",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "node scripts/cp && tsc && rollup -c",
+    "patch": "npm version patch --no-git-tag-version"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/preset-typescript": "^7.18.6",
+    "@rollup/plugin-babel": "5.3.1",
+    "@rollup/plugin-node-resolve": "13.3.0",
+    "@types/node": "^18.7.14",
+    "babel-preset-solid": "^1.5.3",
+    "rollup": "^2.79.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "solid-js": "^1.5.3",
+    "typescript": "^4.8.2"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OrJDev/solidjs-typewriter.git"
+  },
+  "keywords": [
+    "solidjs",
+    "typewriter"
+  ],
+  "bugs": {
+    "url": "https://github.com/OrJDev/solidjs-typewriter/issues"
+  },
+  "homepage": "https://github.com/OrJDev/solidjs-typewriter#readme"
+}
