@@ -25,19 +25,19 @@ const MyComponent = () => {
 ### Example With Hook
 
 ```jsx
-import { createTypeWriter, Cursor } from 'solidjs-typewriter';
+import { createTypeWriter, Cursor } from "solidjs-typewriter";
 
 const MyComponent = () => {
   const typeWriter = createTypeWriter({
-    words: ['Hello', 'From', 'Typewriter', 'Hook!'],
-    loop: { 3 },
+    words: ["Hello", "From", "Typewriter", "Hook!"],
+    loop: 3, // use loop: true for infinite loop
     onLoopDone: () => console.log(`loop completed.`),
-  })
+  });
   return (
-    <div class='App'>
+    <div class="App">
       <span>{typeWriter().text}</span>
       <Cursor />
     </div>
-  )
-}
+  );
+};
 ```
